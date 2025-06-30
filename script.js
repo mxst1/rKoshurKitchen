@@ -216,7 +216,7 @@ async function checkout() {
 	}
 
 	let totalAmount = cart.reduce((total, item) => {
-		return total + dishes[item.dish].price * item.quantity;
+		return total + dishes[item.dish].price[item.weight] * item.quantity;
 	}, 0);
 
 	let order = ``;
@@ -227,7 +227,7 @@ async function checkout() {
 		order =
 			order +
 			`*${dishDetails.name}* (${item.weight}) x ${item.quantity}. Price: $${
-				dishDetails.price * item.quantity
+				dishDetails.price[item.weight] * item.quantity
 			}\n`;
 	});
 
@@ -247,12 +247,28 @@ async function clearValues() {
 	closeConfirmationPopup();
 }
 
-const loadMoreButton = document.getElementById("loadMoreButton");
-const hiddenPhotos = document.querySelectorAll(".dish.hidden");
+const nonVegLoadMoreButton = document.getElementById("nonVegLoadMoreButton");
+const nonVegHiddenPhotos = document.querySelectorAll(".dish.hidden-nonveg");
+const vegLoadMoreButton = document.getElementById("vegLoadMoreButton");
+const vegHiddenPhotos = document.querySelectorAll(".dish.hidden-veg");
 
-async function loadMore() {
-	hiddenPhotos.forEach((photo) => photo.classList.remove("hidden"));
-	loadMoreButton.style.display = "none"; // hide the button after click
+async function loadMore(dishType) {
+	switch (dishType) {
+		case "veg":
+			vegHiddenPhotos.forEach((photo) => photo.classList.remove("hidden-veg"));
+			vegLoadMoreButton.style.display = "none";
+			break;
+
+		case "non-veg":
+			nonVegHiddenPhotos.forEach((photo) =>
+				photo.classList.remove("hidden-nonveg")
+			);
+			nonVegLoadMoreButton.style.display = "none";
+			break;
+
+		default:
+			break;
+	}
 }
 
 async function showBrokenHeart() {

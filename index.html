@@ -219,7 +219,7 @@
 							Add to Cart
 						</div>
 					</div>
-					<div class="dish hidden">
+					<div class="dish hidden-nonveg">
 						<div style="overflow: hidden; width: 400px; height: 500px">
 							<img
 								src="./assets/images/dishes/mutton-kanti.jpg"
@@ -259,7 +259,9 @@
 				</div>
 			</div>
 			<div class="load_div">
-				<button onclick="loadMore()" id="loadMoreButton">Load more</button>
+				<button onclick="loadMore('non-veg')" id="nonVegLoadMoreButton">
+					Load more
+				</button>
 			</div>
 			<hr />
 			<div class="veg menu-category">
@@ -426,7 +428,7 @@
 							Add to Cart
 						</div>
 					</div>
-					<div class="dish hidden">
+					<div class="dish hidden-veg">
 						<div style="overflow: hidden; width: 400px; height: 500px">
 							<img
 								src="./assets/images/dishes/nadur-yakhni.jpg"
@@ -465,7 +467,7 @@
 							Add to Cart
 						</div>
 					</div>
-					<div class="dish hidden">
+					<div class="dish hidden-veg">
 						<div style="overflow: hidden; width: 400px; height: 500px">
 							<img
 								src="./assets/images/dishes/cauliflower-rogan-josh.jpg"
@@ -508,60 +510,9 @@
 				</div>
 			</div>
 			<div class="load_div">
-				<button id="loadMoreButton" onclick="loadMore()">Load more</button>
-			</div>
-			<hr />
-			<div class="chutney menu-category">
-				<h1>Chutney's Coming Soon!</h1>
-				<div class="chutney-options">
-					<!-- <div class="dish">
-						<div style="overflow: hidden; width: 400px; height: 500px">
-							<img
-								src="./assets/images/dishes/walnut-chutney.jpg"
-								alt="Walnut Chutney"
-								style="
-									position: relative;
-									top: -30px;
-									width: 400px;
-									height: 600px;
-								"
-							/>
-						</div>
-						<h2>Walnut Chutney</h2>
-						<p>$35.00</p>
-						<p>
-							A mixture of various dry fruits, paneer sautéed in Ghee and spices
-							coated with sugar syrup.
-						</p>
-						<div class="weight-dropdown">
-							<select name="weight" title="Select weight" id="weight-wnc">
-								<option value="" disabled selected>Select weight:</option>
-								<option value="500g">500g - $35.00</option>
-								<option value="1kg">1kg - $55.00</option>
-							</select>
-						</div>
-						<div class="quantity">
-							<input
-								type="number"
-								name="quantity"
-								min="1"
-								value="1"
-								id="quantity-wnc"
-							/>
-						</div>
-						<div
-							class="add-to-cart-button"
-							onclick="addToCart('wnc', 
-							document.getElementById('weight-wnc').value, 
-							document.getElementById('quantity-wnc').value)"
-						>
-							Add to Cart
-						</div>
-					</div> -->
-				</div>
-			</div>
-			<div class="load_div">
-				<button id="loadMoreButton">Load more</button>
+				<button id="vegLoadMoreButton" onclick="loadMore('veg')">
+					Load more
+				</button>
 			</div>
 			<hr />
 			<div class="desserts menu-category">
@@ -613,9 +564,62 @@
 					</div>
 				</div>
 			</div>
-			<div class="load_div">
+			<!-- <div class="load_div">
 				<button id="loadMoreButton">Load more</button>
+			</div> -->
+			<hr />
+			<div class="chutney menu-category">
+				<h1>Chutney's Coming Soon!</h1>
+				<div class="chutney-options">
+					<!-- <div class="dish">
+						<div style="overflow: hidden; width: 400px; height: 500px">
+							<img
+								src="./assets/images/dishes/walnut-chutney.jpg"
+								alt="Walnut Chutney"
+								style="
+									position: relative;
+									top: -30px;
+									width: 400px;
+									height: 600px;
+								"
+							/>
+						</div>
+						<h2>Walnut Chutney</h2>
+						<p>$35.00</p>
+						<p>
+							A mixture of various dry fruits, paneer sautéed in Ghee and spices
+							coated with sugar syrup.
+						</p>
+						<div class="weight-dropdown">
+							<select name="weight" title="Select weight" id="weight-wnc">
+								<option value="" disabled selected>Select weight:</option>
+								<option value="500g">500g - $35.00</option>
+								<option value="1kg">1kg - $55.00</option>
+							</select>
+						</div>
+						<div class="quantity">
+							<input
+								type="number"
+								name="quantity"
+								min="1"
+								value="1"
+								id="quantity-wnc"
+							/>
+						</div>
+						<div
+							class="add-to-cart-button"
+							onclick="addToCart('wnc', 
+							document.getElementById('weight-wnc').value, 
+							document.getElementById('quantity-wnc').value)"
+						>
+							Add to Cart
+						</div>
+					</div> -->
+				</div>
 			</div>
+			<!-- <div class="load_div">
+				<button id="loadMoreButton">Load more</button>
+			</div> -->
 		</div>
 		<div class="cart">
 			<div class="close-button" onclick="closeCart()">
@@ -703,8 +707,8 @@
 						My husband has gluten problem and he was not able enjoy things he
 						used to enjoy. Recently we discovered Rohini's Gluten free product.
 						Especially Mathi and Jalabi. Both preparation were good, tasty, and
-						close to wheat Mathi. On top of that, packaging was superb. Not one piece
-						was broken in transport
+						close to wheat Mathi. On top of that, packaging was superb. Not one
+						piece was broken in transport
 					</p>
 				</div>
 				<div class="review">
