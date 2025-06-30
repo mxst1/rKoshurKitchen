@@ -8,6 +8,11 @@
 body {
 	background-color: antiquewhite;
 	margin: 0;
+	overflow-x: hidden;
+}
+
+hr {
+	width: 90%;
 }
 
 .navbar {
@@ -266,7 +271,11 @@ body {
 	border-radius: 5px;
 }
 
-#loadMoreButton:hover {
+#nonVegLoadMoreButton:hover {
+	background-color: #d1a030;
+}
+
+#vegLoadMoreButton:hover {
 	background-color: #d1a030;
 }
 
@@ -565,6 +574,15 @@ footer p:nth-child(2) {
 }
 
 @media (max-width: 768px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	hr {
+		width: 95%;
+		margin-left: -30px;
+	}
+
 	.navbar {
 		font-size: 1rem;
 		text-align: center;
@@ -596,11 +614,18 @@ footer p:nth-child(2) {
 		font-size: 1.2rem;
 	}
 
-	.about-content,
-	.about-image-container {
+	.about-content {
 		float: none;
 		width: 100%;
 		height: auto;
+	}
+
+	.about-image-container {
+		display: none;
+	}
+
+	.menu-category h1 {
+		margin-left: -50px;
 	}
 
 	.about-content img {
@@ -613,6 +638,13 @@ footer p:nth-child(2) {
 		position: static;
 	}
 
+	.about-text-div {
+		width: 370px;
+		position: relative;
+		left: 3%;
+		text-align: left;
+	}
+
 	.about-content p {
 		padding: 10px;
 		font-size: 1rem;
@@ -620,8 +652,8 @@ footer p:nth-child(2) {
 	}
 
 	.dish {
-		width: 90%;
-		margin: 10px auto;
+		width: 83%;
+		/* margin: 10px auto; */
 	}
 
 	.dish img {
@@ -633,6 +665,12 @@ footer p:nth-child(2) {
 	.checkout-button {
 		width: 80%;
 		font-size: 0.9rem;
+	}
+
+	#nonVegLoadMoreButton,
+	#vegLoadMoreButton {
+		width: 50%;
+		margin-left: -50px;
 	}
 
 	.cart {
@@ -680,6 +718,11 @@ footer p:nth-child(2) {
 	footer p:nth-child(2) {
 		flex: unset;
 	}
+
+	.reviews {
+		max-width: 80%;
+	}
+
 	.review {
 		padding: 10px 5px;
 		max-width: 80%;
