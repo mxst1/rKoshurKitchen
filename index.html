@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>rKoshurKitchen - Home</title>
+		<link rel="stylesheet" href="./style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="logo">
+				<h1>rKoshurKitchen.com</h1>
+			</div>
+			<div class="cart-button" onclick="openCart()">
+				<i
+					class="fa-solid fa-cart-shopping fa-2xl"
+					style="position: relative; top: 12px"
+				></i>
+			</div>
+		</nav>
+		<div id="intro">
+			<h1 class="main-title">Kashmiri Pandit Cuisine:</h1>
+			<p class="main-description">A Culinary Journey Through Time</p>
+		</div>
+		<div class="about">
+			<div class="about-content">
+				<img src="./assets/images/rohini.jpg" alt="Rohini Bhan Challu" />
+				<div class="about-text-div">
+					<p>
+						RohiniBhan Challu, a Graphic Designer by profession, always had a
+						passion for cooking. She is the passionate Home Chef behind
+						rKoshurKitchen, brings the Authentic taste of Kashmiri Cuisine to
+						life with recipes passed down through generations. Her dishes are a
+						reflection of tradition, warmth, and the rich flavors of the Valley,
+						lovingly prepared in her home kitchen. With rKoshurKitchen, Rohini
+						offers a true taste of Kashmir, one soulful meal at a time.
+					</p>
+				</div>
+			</div>
+			<div class="about-image-container">
+				<img
+					src="./assets/images/about-food.jpg"
+					alt="About Kashmiri Pandit Cuisine"
+					class="about-image"
+				/>
+			</div>
+		</div>
+		<div class="menu">
+			<hr />
+			<div class="non-veg menu-category">
+				<h1>Non-Vegetarian</h1>
+				<div class="nonveg-options">
+					<div class="dish">
+						<div style="overflow: hidden; width: 400px; height: 500px">
+							<img
+								src="./assets/images/dishes/mutton-rogan-josh.jpg"
+								alt="Mutton Rogan Josh"
+								style="
+									position: relative;
+									top: -550px;
+									left: -370px;
+									width: 900px;
+									height: 1200px;
+								"
+							/>
+						</div>
+						<h2>Mutton Rogan Josh</h2>
+						<p>$65.00/Kilo.</p>
+						<p>
+							A signature dish of tender lamb braised in a vibrant red gravy
+							made with yogurt, dried ginger, and aromatic spices.
+						</p>
+						<div class="weight-dropdown">
+							<select name="weight" title="Select weight" id="weight-mrj">
+								<option value="" disabled selected>Select weight:</option>
+								<option value="1kg">1kg - $65.00</option>
+							</select>
+						</div>
+						<div class="quantity">
+							<input
+								type="number"
+								name="quantity"
+								min="1"
+								value="1"
+								id="quantity-mrj"
+							/>
+						</div>
+						<div
+							class="add-to-cart-button"
+							onclick="addToCart('mrj', 
+							document.getElementById('weight-mrj').value, 
+							document.getElementById('quantity-mrj').value)"
+						>
+							Add to Cart
+						</div>
+					</div>
+					<div class="dish">
+						<div style="overflow: hidden; width: 400px; height: 500px">
+							<img
+								src="./assets/images/dishes/masc.jpg"
+								alt="Masc"
+								style="position: relative; top: -80px; left: -70px"
+							/>
+						</div>
+						<h2>Masc (Meat Balls)</h2>
+						<p>$75.00/Kilo.</p>
+						<p>
+							Crafted from finely ground meat and delicately spiced with a
+							unique blend of Kashmiri masalas, slow-cooked to perfection.
+						</p>
+						<div class="weight-dropdown">
+							<select name="weight" title="Select weight" id="weight-masc">
+								<option value="" disabled selected>Select weight:</option>
+								<option value="1kg">1kg - $75.00</option>
+							</select>
+						</div>
+						<div class="quantity">
+							<input
+								type="number"
+								name="quantity"
+								min="1"
+								value="1"
+								id="quantity-masc"
+							/>
+						</div>
+						<div
+							class="add-to-cart-button"
+							onclick="addToCart('masc', 
+							document.getElementById('weight-masc').value, 
+							document.getElementById('quantity-masc').value)"
+						>
+							Add to Cart
+						</div>
+					</div>
+					<div class="dish">
+						<div style="overflow: hidden; width: 400px; height: 500px">
+							<img
+								src="./assets/images/dishes/chicken-rogan-josh.jpg"
+								alt="Chicken Rogan Josh"
+								style="position: relative; width: 400px; height: 500px"
+							/>
+						</div>
+						<h2>Chicken Rogan Josh</h2>
+						<p>$45.00/Kilo.</p>
+						<p>
+							A rich and Aromatic Chicken Curry simmered in Kashmiri spices and
+							Red Chili for a bold flavor.
+						</p>
+						<div class="weight-dropdown">
+							<select name="weight" title="Select weight" id="weight-crj">
+								<option value="" disabled selected>Select weight:</option>
+								<option value="1kg">1kg - $45.00</option>
+							</select>
+						</div>
+						<div class="quantity">
+							<input
+								type="number"
+								name="quantity"
+								min="1"
+								value="1"
+								id="quantity-crj"
+							/>
+						</div>
+						<div
+							class="add-to-cart-button"
+							onclick="addToCart('crj', 
+							document.getElementById('weight-crj').value, 
+							document.getElementById('quantity-crj').value)"
+						>
+							Add to Cart
+						</div>
+					</div>
+					<div class="dish">
+						<div style="overflow: hidden; width: 400px; height: 500px">
+							<img
+								src="./assets/images/dishes/egg-curry.jpg"
+								alt="Egg Curry"
+								style="
+									position: relative;
+									left: -90px;
+									top: 0px;
+									width: 600px;
+									height: 700px;
+								"
+							/>
+						</div>
+						<h2>Egg Curry</h2>
+						<p>$20.00/6 Eggs.</p>
+						<p>
+							Hard-boiled eggs steeped in a fragrant, mildly spiced
+							Kashmiri-style gravy with a hint of fennel and ginger.
+						</p>
+						<div class="weight-dropdown">
+							<select name="weight" title="Select weight" id="weight-ec">
+								<option value="" disabled selected>Select weight:</option>
+								<option value="6 eggs">6 eggs - $20.00</option>
+								<option value="12 eggs">12 eggs - $40.00</option>
+							</select>
+						</div>
+						<div class="quantity">
+							<input
+								type="number"
+								name="quantity"
+								min="1"
+								value="1"
+								id="quantity-ec"
+							/>
+						</div>
+						<div
+							class="add-to-cart-button"
+							onclick="addToCart('ec', 
+							document.getElementById('weight-ec').value, 
+							document.getElementById('quantity-ec').value)"
+						>
+							Add to Cart
+						</div>
+					</div>
+					<div class="dish hidden">
+						<div style="overflow: hidden; width: 400px; height: 500px">
+							<img
+								src="./assets/images/dishes/mutton-kanti.jpg"
+								alt="Mutton Kanti"
+							/>
+						</div>
+						<h2>Mutton Kanti</h2>
+						<p>$75.00/Kilo.</p>
+						<p>
+							Bitesize Mutton Cubes Marinated in Kashmiri Spices and Sautéed
+							with Onions and Tomatoes.
+						</p>
+						<div class="weight-dropdown">
+							<select name="weight" title="Select weight" id="weight-mk">
+								<option value="" disabled selected>Select weight:</option>
+								<option value="1kg">1kg - $75.00</option>
+							</select>
+						</div>
+						<div class="quantity">
+							<input
+								type="number"
+								name="quantity"
+								min="1"
+								value="1"
+								id="quantity-mk"
+							/>
+						</div>
+						<div
+							class="add-to-cart-button"
+							onclick="addToCart('mk', 
+							document.getElementById('weight-mk').value, 
+							document.getElementById('quantity-mk').value)"
+						>
+							Add to Cart
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="load_div">
+				<button onclick="loadMore()" id="loadMoreButton">Load more</button>
+			</div>
+			<hr />
+			<div class="veg menu-category">
+				<h1>Vegetarian</h1>
+				<div class="veg-options">
+					<div class="dish">
+						<div style="overflow: hidden; width: 400px; height: 500px">
+							<img
+								src="./assets/images/dishes/dum-aloo.jpg"
+								alt="Dum Aloo"
+								style="
+									position: relative;
+									top: -115px;
+									left: -160px;
+									width: 700px;
+									height: 700px;
+								"
+							/>
+						</div>
+						<h2>Dum Aloo</h2>
+						<p>$40.00/Kilo.</p>
+						<p>
+							Potatoes slow-cooked in a Spiced gravy, capturing the essence of
+							traditional Kashmiri Vegetarian Cuisine.
+						</p>
+						<div class="weight-dropdown">
+							<select name="weight" title="Select weight" id="weight-da">
+								<option value="" disabled selected>Select weight:</option>
+								<option value="1kg">1kg - $40.00</option>
+							</select>
+						</div>
+						<div class="quantity">
+							<input
+								type="number"
+								name="quantity"
+								min="1"
+								value="1"
+								id="quantity-da"
+							/>
+						</div>
+						<div
+							class="add-to-cart-button"
+							onclick="addToCart('da', 
+							document.getElementById('weight-da').value, 
+							document.getElementById('quantity-da').value)"
+						>
+							Add to Cart
+						</div>
+					</div>
+					<div class="dish">
+						<div style="overflow: hidden; width: 400px; height: 500px">
+							<img
+								src="./assets/images/dishes/paneer-rogan-josh.jpg"
+								alt="Paneer Rogan Josh"
+								style="position: relative; top: -110px; left: -70px"
+							/>
+						</div>
+						<h2>Paneer Rogan Josh</h2>
+						<p>$25.00/0.5 Kilo.</p>
+						<p>
+							A vegetarian twist on the classic, featuring paneer in a rich, Red
+							Chili gravy bursting with warmth and spice.
+						</p>
+						<div class="weight-dropdown">
+							<select name="weight" title="Select weight" id="weight-prj">
+								<option value="" disabled selected>Select weight:</option>
+								<option value="500g">500g - $25.00</option>
+								<option value="1kg">1kg - $40.00</option>
+							</select>
+						</div>
+						<div class="quantity">
+							<input
+								type="number"
+								name="quantity"
+								min="1"
+								value="1"
+								id="quantity-prj"
+							/>
+						</div>
+						<div
+							class="add-to-cart-button"
+							onclick="addToCart('prj', 
+							document.getElementById('weight-prj').value, 
+							document.getElementById('quantity-prj').value)"
+						>
+							Add to Cart
+						</div>
+					</div>
+					<div class="dish">
+						<div style="overflow: hidden; width: 400px; height: 500px">
+							<img
+								src="./assets/images/dishes/paneer-kalia.jpg"
+								alt="Paneer Kalia"
+								style="position: relative; left: -130px; top: -100px"
+							/>
+						</div>
+						<h2>Paneer Kalia</h2>
+						<p>$25.00/0.5 Kilo.</p>
+						<p>
+							Soft paneer cubes simmered in a Turmeric-Fennel gravy infused with
+							other Kashmiri Spices.
+						</p>
+						<div class="weight-dropdown">
+							<select name="weight" title="Select weight" id="weight-pk">
+								<option value="" disabled selected>Select weight:</option>
+								<option value="500g">500g - $25.00</option>
+								<option value="1kg">1kg - $40.00</option>
+							</select>
+						</div>
+						<div class="quantity">
+							<input
+								type="number"
+								name="quantity"
+								id="quantity-pk"
+								min="1"
+								value="1"
+							/>
+						</div>
+						<div
+							class="add-to-cart-button"
+							onclick="addToCart('pk', 
+							document.getElementById('weight-pk').value, 
+							document.getElementById('quantity-pk').value)"
+						>
+							Add to Cart
+						</div>
+					</div>
+					<div class="dish">
+						<div style="overflow: hidden; width: 400px; height: 500px">
+							<img
+								src="./assets/images/dishes/paneer-kanti.jpg"
+								alt="Paneer Kanti"
+								style="position: relative; top: -110px; left: -70px"
+							/>
+						</div>
+						<h2>Paneer Kanti</h2>
+						<p>$30.00/0.5 Kilo.</p>
+						<p>
+							Soft Paneer Cubes Marinated in Kashmiri Spices and Sautéed with
+							Onions and Tomatoes.
+						</p>
+						<div class="weight-dropdown">
+							<select name="weight" title="Select weight" id="weight-pkt">
+								<option value="" disabled selected>Select weight:</option>
+								<option value="500g">500g - $30.00</option>
+								<option value="1kg">1kg - $55.00</option>
+							</select>
+						</div>
+						<div class="quantity">
+							<input
+								type="number"
+								name="quantity"
+								min="1"
+								value="1"
+								id="quantity-pkt"
+							/>
+						</div>
+						<div
+							class="add-to-cart-button"
+							onclick="addToCart('pkt', 
+							document.getElementById('weight-pkt').value, 
+							document.getElementById('quantity-pkt').value)"
+						>
+							Add to Cart
+						</div>
+					</div>
+					<div class="dish hidden">
+						<div style="overflow: hidden; width: 400px; height: 500px">
+							<img
+								src="./assets/images/dishes/nadur-yakhni.jpg"
+								alt="Nadur Yakhni"
+								style="position: relative; top: -50px; left: -85px"
+							/>
+						</div>
+						<h2>Nadur Yakhni</h2>
+						<p>$30.00/0.5 Kilo.</p>
+						<p>
+							Lotus stem slow cooked in a delicate Fennel-Yogurt based gravy,
+							flavored with mild spices.
+						</p>
+						<div class="weight-dropdown">
+							<select name="weight" title="Select weight" id="weight-ny">
+								<option value="" disabled selected>Select weight:</option>
+								<option value="500g">500g - $30.00</option>
+								<option value="1kg">1kg - $50.00</option>
+							</select>
+						</div>
+						<div class="quantity">
+							<input
+								type="number"
+								name="quantity"
+								id="quantity-ny"
+								min="1"
+								value="1"
+							/>
+						</div>
+						<div
+							class="add-to-cart-button"
+							onclick="addToCart('ny', 
+							document.getElementById('weight-ny').value, 
+							document.getElementById('quantity-ny').value)"
+						>
+							Add to Cart
+						</div>
+					</div>
+					<div class="dish hidden">
+						<div style="overflow: hidden; width: 400px; height: 500px">
+							<img
+								src="./assets/images/dishes/cauliflower-rogan-josh.jpg"
+								alt="Cauliflower Rogan Josh"
+								style="position: relative; top: -100px; left: -85px"
+							/>
+						</div>
+						<h2>Cauliflower Rogan Josh</h2>
+						<p>$30.00/0.5 Kilo.</p>
+						<p>
+							Medium sized Cauliflower slowly simmered and cooked in Kashimir
+							spices.
+						</p>
+						<div class="weight-dropdown">
+							<select name="weight" title="Select weight" id="weight-cfrj">
+								<option value="" disabled selected>Select weight:</option>
+								<option value="500g">500g - $30.00</option>
+								<!-- TODO: Add price-->
+								<option value="1kg">1kg - $50.00</option>
+							</select>
+						</div>
+						<div class="quantity">
+							<input
+								type="number"
+								name="quantity"
+								id="quantity-cfrj"
+								min="1"
+								value="1"
+							/>
+						</div>
+						<div
+							class="add-to-cart-button"
+							onclick="addToCart('cfrj', 
+							document.getElementById('weight-cfrj').value, 
+							document.getElementById('quantity-cfrj').value)"
+						>
+							Add to Cart
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="load_div">
+				<button id="loadMoreButton" onclick="loadMore()">Load more</button>
+			</div>
+			<hr />
+			<div class="chutney menu-category">
+				<h1>Chutney's Coming Soon!</h1>
+				<div class="chutney-options">
+					<!-- <div class="dish">
+						<div style="overflow: hidden; width: 400px; height: 500px">
+							<img
+								src="./assets/images/dishes/walnut-chutney.jpg"
+								alt="Walnut Chutney"
+								style="
+									position: relative;
+									top: -30px;
+									width: 400px;
+									height: 600px;
+								"
+							/>
+						</div>
+						<h2>Walnut Chutney</h2>
+						<p>$35.00</p>
+						<p>
+							A mixture of various dry fruits, paneer sautéed in Ghee and spices
+							coated with sugar syrup.
+						</p>
+						<div class="weight-dropdown">
+							<select name="weight" title="Select weight" id="weight-wnc">
+								<option value="" disabled selected>Select weight:</option>
+								<option value="500g">500g - $35.00</option>
+								<option value="1kg">1kg - $55.00</option>
+							</select>
+						</div>
+						<div class="quantity">
+							<input
+								type="number"
+								name="quantity"
+								min="1"
+								value="1"
+								id="quantity-wnc"
+							/>
+						</div>
+						<div
+							class="add-to-cart-button"
+							onclick="addToCart('wnc', 
+							document.getElementById('weight-wnc').value, 
+							document.getElementById('quantity-wnc').value)"
+						>
+							Add to Cart
+						</div>
+					</div> -->
+				</div>
+			</div>
+			<div class="load_div">
+				<button id="loadMoreButton">Load more</button>
+			</div>
+			<hr />
+			<div class="desserts menu-category">
+				<h1>Desserts</h1>
+				<div class="dessert-options">
+					<div class="dish">
+						<div style="overflow: hidden; width: 400px; height: 500px">
+							<img
+								src="./assets/images/dishes/shufta.jpg"
+								alt="Shufta"
+								style="
+									position: relative;
+									top: -100px;
+									width: 400px;
+									height: 600px;
+								"
+							/>
+						</div>
+						<h2>Shufta</h2>
+						<p>$35.00</p>
+						<p>
+							A mixture of various dry fruits, paneer sautéed in Ghee and spices
+							coated with sugar syrup.
+						</p>
+						<div class="weight-dropdown">
+							<select name="weight" title="Select weight" id="weight-sh">
+								<option value="" disabled selected>Select weight:</option>
+								<option value="500g">500g</option>
+								<option value="1kg">1kg</option>
+							</select>
+						</div>
+						<div class="quantity">
+							<input
+								type="number"
+								name="quantity"
+								min="1"
+								value="1"
+								id="quantity-sh"
+							/>
+						</div>
+						<div
+							class="add-to-cart-button"
+							onclick="addToCart('sh', 
+							document.getElementById('weight-sh').value, 
+							document.getElementById('quantity-sh').value)"
+						>
+							Add to Cart
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="load_div">
+				<button id="loadMoreButton">Load more</button>
+			</div>
+		</div>
+		<div class="cart">
+			<div class="close-button" onclick="closeCart()">
+				<i
+					class="fa-solid fa-xmark fa-2xl"
+					style="position: relative; top: 5px"
+				></i>
+			</div>
+			<h1>Cart</h1>
+			<hr />
+			<div class="cart-items">
+				<!-- Cart items will be dynamically added here -->
+			</div>
+			<div class="cart-total">
+				<p>Total: $<span id="total-amount">0.00</span></p>
+			</div>
+			<div class="checkout-button" onclick="checkout()">
+				Checkout on Whatsapp
+			</div>
+		</div>
+		<hr />
+		<div class="reviews">
+			<h1>Customer Reviews</h1>
+			<div class="reviews-list" id="reviews-list">
+				<div class="review">
+					<p>
+						<strong class="review-author">Arthi A.</strong>
+					</p>
+					<p class="review-text">
+						We recently ordered a mix of vegetarian and non-vegetarian Kashmiri
+						food from rKoshurKitchen by Rohini here in Brookfield, Wisconsin,
+						and it was absolutely finger-licking good! We were a group of 12,
+						and every single person couldn't stop talking about how delicious
+						everything was. From the flavorful Mutton Rogan Josh to the creamy
+						Dum Aloo, each dish was rich, authentic, and so satisfying. The
+						portion sizes were generous - plenty for everyone — and the
+						packaging was neat and thoughtful. You could genuinely taste the
+						warmth and tradition in every bite. Highly, highly recommend
+						rKoshurKitchen if you're looking for homestyle Kashmiri food in the
+						Milwaukee area. We're already planning our next order!
+					</p>
+				</div>
+
+				<div class="review">
+					<p>
+						<strong class="review-author">Sayali B.</strong>
+					</p>
+					<p class="review-text">
+						If you're are looking for lunch thalis, you must try Rohini's
+						rKoshurKitchen! We ordered Mothers day Veg and Mutton thali from
+						Rohini today. Both the thalis were delectable, especially relished
+						the flavors of the Dum Aloo and Nadur Yakhni. I was happily
+						surprised to receive complimentary delicious chocolates as well! I
+						didn't know they're called Dubai chocolates until now, but we both
+						loved it. They were caramelly, crunchy...just yummy! Thank you
+						Rohini!
+					</p>
+				</div>
+				<div class="review">
+					<p>
+						<strong class="review-author">Baqa</strong>
+						<!-- <span>★★★★★</span> -->
+					</p>
+					<p class="review-text">
+						Amazing quality and taste! Best Dubai chocolate in Milwaukee
+					</p>
+				</div>
+				<div class="review">
+					<p>
+						<strong class="review-author">Kieth</strong>
+					</p>
+					<p class="review-text">
+						Our staff really enjoyed the experience of trying your Dubai Kunafa
+						Chocolate. The presentation was fantastic, and the taste was even
+						better. As a rule, Dr Post has become quite careful about his sugar
+						consumption, but he did enjoy the special treat! We all thought it
+						was so good. Thanks again.
+					</p>
+				</div>
+				<div class="review">
+					<p>
+						<strong class="review-author">Shakti K.</strong>
+					</p>
+					<p class="review-text">
+						My husband has gluten problem and he was not able enjoy things he
+						used to enjoy. Recently we discovered Rohini's Gluten free product.
+						Especially Mathi and Jalabi. Both preparation were good, tasty, and
+						close to wheat Mathi. On top of that, packaging was superb. Not one piece
+						was broken in transport
+					</p>
+				</div>
+				<div class="review">
+					<p>
+						<strong class="review-author">Namita</strong>
+						<!-- <span>★★★★★</span> -->
+					</p>
+					<p class="review-text">
+						It was great ... my dad and husband loved the Mutton Rogan Josh and
+						mom and myself over all veg recipes. Also the cheese cake was so
+						yumm
+					</p>
+				</div>
+				<div class="review">
+					<p>
+						<strong class="review-author">Mallika H.</strong>
+					</p>
+					<p class="review-text">
+						Highly recommend, really yummy, got some to take to work and
+						everyone loved the Jalebis !!
+					</p>
+				</div>
+				<div class="review">
+					<p>
+						<strong class="review-author">Supriya T.</strong>
+					</p>
+					<p class="review-text">
+						Ordered Rogan Josh and it was relished by all! It was beautifully
+						packaged and labelled (I had to draw attention to this because a
+						little of time the at home cooks don't pay much attention to this)
+						and Rohini sent me a text on how to heat and serve it!
+					</p>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<center>
+			<footer>
+				<p>&copy; 2025 rKoshurKitchen.com</p>
+				<p>All rights reserved.</p>
+				<p class="watermark">Site developed with ❤️.</p>
+			</footer>
+		</center>
+		<script src="./script.js"></script>
+	</body>
+</html>
