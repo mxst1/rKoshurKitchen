@@ -100,6 +100,8 @@ if (localStorage.getItem("cart") === null) {
 	localStorage.setItem("cart", JSON.stringify([]));
 }
 
+document.addEventListener("contextmenu", (event) => event.preventDefault());
+
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 updateCart();
