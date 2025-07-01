@@ -66,7 +66,14 @@ const dishes = {
 			"1kg": 50.0,
 		},
 	}, // Nadur Yaknhi
-	sh: { name: "Shufta", image_id: "shufta.jpg", price: 35.0 }, // Shufta
+	sh: {
+		name: "Shufta",
+		image_id: "shufta.jpg",
+		price: {
+			"250g": 40.0,
+			"500g": 70.0,
+		},
+	}, // Shufta
 	pkt: {
 		name: "Paneer Kanti",
 		image_id: "paneer-kanti.jpg",

@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Matangi:wght@300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap");
 
 body {
 	background-color: antiquewhite;
@@ -54,11 +53,12 @@ hr {
 
 #intro .main-title {
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	left: 50%;
 	font-family: "Marcellus", serif;
 	font-size: 4rem;
 	font-weight: 800;
+	width: 100%;
 	transform: translate(-50%, -50%);
 	text-align: center;
 	color: white;
@@ -66,7 +66,7 @@ hr {
 
 #intro .main-description {
 	position: absolute;
-	top: 58%;
+	top: 52%;
 	left: 50%;
 	font-family: "Marcellus", serif;
 	font-size: 1.5rem;
@@ -425,7 +425,6 @@ hr {
 	cursor: pointer;
 	width: 30px;
 	height: 30px;
-	/* background-image: url("./assets/images/close.png"); */
 	background-size: cover;
 	position: relative;
 	left: 230px;
@@ -444,17 +443,8 @@ hr {
 	cursor: pointer;
 	width: 40px;
 	height: 40px;
-	/* background-image: url("./assets/images/cart.png"); */
 	background-size: cover;
 }
-/* 
-.cart-button.not_empty {
-	background-image: url("./assets/images/cart-filled.png");
-	width: 60px;
-	height: 60px;
-	top: 20px;
-	right: 50px;
-} */
 
 footer {
 	background-color: antiquewhite;
@@ -571,6 +561,49 @@ footer p:nth-child(2) {
 .hidden-nonveg,
 .hidden-veg {
 	display: none;
+}
+
+.dish-masc {
+	position: relative;
+	top: -80px;
+	left: -70px;
+}
+
+.dish-prj {
+	position: relative;
+	top: -110px;
+	left: -70px;
+}
+
+.dish-pk {
+	position: relative;
+	left: -130px;
+	top: -100px;
+}
+
+.dish-pkt {
+	position: relative;
+	top: -110px;
+	left: -70px;
+}
+
+.dish-ny {
+	position: relative;
+	top: -50px;
+	left: -85px;
+}
+
+.dish-cfrj {
+	position: relative;
+	top: -100px;
+	left: -85px;
+}
+
+.dish-sh {
+	position: relative;
+	top: -100px;
+	width: 400px;
+	height: 600px;
 }
 
 @media (max-width: 768px) {
@@ -730,5 +763,40 @@ footer p:nth-child(2) {
 	}
 	.review h2 {
 		font-size: 1.3rem;
+	}
+
+	.dish-masc {
+		top: 0px;
+		left: 0px;
+	}
+
+	.dish-prj {
+		top: 0px;
+		left: -20px;
+	}
+
+	.dish-pk {
+		top: 0px;
+		left: -40px;
+	}
+
+	.dish-pkt {
+		top: 0px;
+		left: -20px;
+	}
+	.dish-ny {
+		top: 50px;
+		left: -20px;
+	}
+	.dish-cfrj {
+		top: 0px;
+		left: -20px;
+	}
+
+	.dish-sh {
+		top: 0px;
+		width: 100%;
+		height: auto;
+		left: 0px;
 	}
 }
