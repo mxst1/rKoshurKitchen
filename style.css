@@ -713,14 +713,34 @@ footer p:nth-child(2) {
 	.cart-item {
 		flex-direction: column;
 		align-items: flex-start;
+		height: 150px;
+	}
+
+	.cart-item .dish-details {
+		position: relative;
+		left: 150px;
+		top: -150px;
+		width: 200px;
+	}
+	.cart-item .dish-price {
+		position: relative;
+		left: 150px;
+		top: -150px;
+		font-size: 1.2rem;
+		margin-bottom: 5px;
+		margin-left: 10px;
 	}
 
 	.cart-item img {
 		margin-bottom: 10px;
+		width: 150px;
+		height: 150px;
 	}
 
 	.remove-item {
-		position: static;
+		position: relative;
+		left: 340px;
+		top: -220px;
 		margin-top: 10px;
 	}
 
@@ -767,7 +787,7 @@ footer p:nth-child(2) {
 
 	.dish-masc {
 		top: 0px;
-		left: 0px;
+		left: -20px;
 	}
 
 	.dish-prj {

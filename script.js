@@ -128,13 +128,18 @@ async function updateCart() {
 	const cart = JSON.parse(localStorage.getItem("cart")) || [];
 	const cartItemsContainer = document.querySelector(".cart-items");
 	cartItemsContainer.innerHTML = ""; // Clear previous items
-
+	let tempCart = {};
 	let totalAmount = 0;
+	let index = 0;
 
 	cart.forEach((item) => {
 		const dishDetails = dishes[item.dish];
 		const itemTotal = dishDetails.price[item.weight] * item.quantity;
 		totalAmount += itemTotal;
+
+		Object.assign(tempCart, {
+			[index]: item.dish,
+		});
 
 		console.log(dishDetails.price[item.weight]);
 
@@ -146,18 +151,21 @@ async function updateCart() {
 			item.quantity
 		}</p>
 					<div style="flex-direction: column">
-                    <div id="remove-item" class="remove-item" onclick="removeFromCart('${
-											item.dish
-										}')" onmouseover="showBrokenHeart()" onmouseout="hideBrokenHeart()">
-										<i class="fa-solid fa-heart fa-lg" id="heart"></i>
-										<i class="fa-solid fa-heart-crack fa-lg" id="broken-heart" style="display: none;"></i>
+                    <div id="dish-${index.toString()}" class="remove-item" onclick="removeFromCart('${
+			item.dish
+		}')" onmouseover="showBrokenHeart(${index})" onmouseout="hideBrokenHeart(${index})">
+										<i class="fa-solid fa-heart fa-lg" id="heart-${index}"></i>
+										<i class="fa-solid fa-heart-crack fa-lg" id="broken-heart-${index}" style="display: none;"></i>
 						</div>
 						<p class="dish-price">$${itemTotal.toFixed(2)}</p>
 					</div>
 				</div>
         `;
 		cartItemsContainer.appendChild(cartItem);
+		index++;
 	});
+
+	console.log(tempCart);
 
 	document.getElementById("total-amount").innerText = totalAmount.toFixed(2);
 	if (cart.length > 0) {
@@ -278,19 +286,21 @@ async function loadMore(dishType) {
 	}
 }
 
-async function showBrokenHeart() {
-	const heartIcon = document.getElementById("heart");
-	const brokenHeartIcon = document.getElementById("broken-heart");
-	document.getElementById("remove-item").style.color = "#aa0000";
+async function showBrokenHeart(index) {
+	const heartIcon = document.getElementById(`heart-${index}`);
+	const brokenHeartIcon = document.getElementById(`broken-heart-${index}`);
+	console.log(index);
+	// if (!heartIcon || !brokenHeartIcon) return;
+	document.getElementById(`dish-${index}`).style.color = "#aa0000";
 	heartIcon.style.display = "none";
 	brokenHeartIcon.style.display = "block";
 }
 
-async function hideBrokenHeart() {
-	const heartIcon = document.getElementById("heart");
-	const brokenHeartIcon = document.getElementById("broken-heart");
-	if (!heartIcon || !brokenHeartIcon) return;
-	document.getElementById("remove-item").style.color = "#000";
+async function hideBrokenHeart(index) {
+	const heartIcon = document.getElementById(`heart-${index}`);
+	const brokenHeartIcon = document.getElementById(`broken-heart-${index}`);
+	// if (!heartIcon || !brokenHeartIcon) return;
+	document.getElementById(`dish-${index}`).style.color = "#000";
 	heartIcon.style.display = "block";
 	brokenHeartIcon.style.display = "none";
 }
